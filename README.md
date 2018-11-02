@@ -25,5 +25,6 @@ rated by a physician, adjusted for sex, age, calories consumed, and ECOG perform
 We obtain inverse probability weights using a logistic model, and apply these weights in our 
 function to obtain IPW-adjusted Kaplan-Meier curves and RMSTs.
 
-Karnofsky score is dichotomized according to clinical criteria: http://www.npcrc.org/files/news/karnofsky_performance_scale.pdf
+Karnofsky score is dichotomized according to clinical criteria:
+http://www.npcrc.org/files/news/karnofsky_performance_scale.pdf
 ```
