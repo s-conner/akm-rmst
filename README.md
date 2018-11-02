@@ -5,7 +5,9 @@ We acknowledge the source code of F. Le Borgne and Y. Foucher, authors of the 'a
 
 akm_RMST.R
 ```
-This function will produce IPW-adjusted RMSTs, differences and ratios in RMSTs for pair-wise comparisons, and adjusted Kaplan-Meier survival curves. The function requires the following arguments:
+This function will produce IPW-adjusted RMSTs, differences and ratios in RMSTs for pairwise 
+comparisons, and adjusted Kaplan-Meier survival curves. 
+The function requires the following arguments:
 
 Time: time to event
 Status: 0 if censored, 1 if event
