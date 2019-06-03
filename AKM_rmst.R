@@ -7,7 +7,8 @@
 # Tau is a user-specified truncation point. 
 # If not specified, the default will be the minimum of the each groups' last event time 
 
-akm_rmst <- function(time, status, group, weight=NULL, tau=NULL, alpha=.05){
+akm_rmst <- function(time, status, group, weight=NULL, tau=NULL, alpha=.05, 
+                     xaxismin=0, xaxismax=max(time)){
   if(sum(time<0)>0){print("Error: times must be positive.")
   }else{
     if(sum(weight<=0)>0){print("Error: weights must be greater than 0.")
@@ -38,7 +39,7 @@ akm_rmst <- function(time, status, group, weight=NULL, tau=NULL, alpha=.05){
         groupval <- rep(999, length(1:j))
         rmst_var <- rep(999, length(1:j))
         rmst_se <- rep(999, length(1:j))
-        plot(NULL, xlim=c(0, max(time)), ylim=c(0,1), xlab='Time',ylab='Adjusted Survival Probability')
+        plot(NULL, xlim=c(xaxismin, xaxismax), ylim=c(0,1), xlab='Time',ylab='Adjusted Survival Probability')
         title(main='Adjusted Kaplan-Meier')
 
         for (i in 1:j){
