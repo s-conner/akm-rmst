@@ -15,6 +15,10 @@ Group: factor variable for the exposure of interest
 Weights: to be obtained previously, ie through logistic models
 Tau: a user-specified truncation point. 
      If not specified, the default will be the minimum of the each groups' last event time 
+Xaxismin: an optional minimum value for the x axis of the Kaplan-Meier plot.
+     If not specified, the default is 0.
+Xaxismax: an optional maximum value for the x axis of the Kaplan-Meier plot.
+     If not specified, the default is the maximum survival time.
 ```
 
 lung.R
