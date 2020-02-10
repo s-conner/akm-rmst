@@ -25,7 +25,7 @@ akm_rmst <- function(time, status, group, weight=NULL, tau=NULL, alpha=.05,
         j=length(unique(data$group))
         
         if(is.null(tau)){
-          taui = rep(999, 3)
+          taui = rep(999, j)
           for (i in (1:j)){
             groupval <- (levels(data$group)[i])
             dat_group <- data[which(data$group==(groupval)),]
