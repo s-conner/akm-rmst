@@ -72,8 +72,8 @@ akm_rmst <- function(time, status, group, weight=NULL, tau=NULL, alpha=.05,
           
           #--- Variance ---
           mj_r <- ft$mj[rtime]
-          #var_r <- ifelse((yj_r-dj_r)==0, 0, dj_r /(mj_r *(yj_r - dj_r)))
-          var_r <- ifelse((yj_r-dj_r)==0, 0, dj_r /(yj_r *(yj_r - dj_r)))
+          var_r <- ifelse((yj_r-dj_r)==0, 0, dj_r /(mj_r *(yj_r - dj_r)))
+          #var_r <- ifelse((yj_r-dj_r)==0, 0, dj_r /(yj_r *(yj_r - dj_r)))
           var_r <- c(var_r,0)
           rmst_var[i] <- sum(cumsum(rev(areas[-1]))^2 * rev(var_r)[-1])
           rmst_se[i] <- sqrt(rmst_var[i])
